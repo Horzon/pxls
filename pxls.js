@@ -189,9 +189,7 @@ function AutoPXLS(images){
 
     function isReady(){
       return image_loaded_flag;
-    }
-  };
-
+    };
 
   var painters = [];
   for(var i = 0; i < images.length; i++){
