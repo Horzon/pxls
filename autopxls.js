@@ -181,7 +181,7 @@ function AutoPXLS(images){
     var timer = (App.cooldown-(new Date).getTime())/1E3;
     if(0<timer){
       console.log("timer: " + timer);
-      setTimeout(draw, 10);
+      setTimeout(draw, 1000);
     }
     else{
       for(var i = 0; i < painters.length; i++){
@@ -189,7 +189,7 @@ function AutoPXLS(images){
           var result = painters[i].drawImage();
 
           if(result > 0){
-            setTimeout(draw, result*10);
+            setTimeout(draw, result*1000);
             return;
           }
           else{
@@ -200,7 +200,7 @@ function AutoPXLS(images){
           continue;
         }
       }
-      setTimeout(draw, 30);
+      setTimeout(draw, 3000);
     }
 
     return;
