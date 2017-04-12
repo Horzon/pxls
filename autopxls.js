@@ -376,16 +376,10 @@ function AutoPXLS(images, cooldown, debug){
   }
 
   function draw(){
-    var rndtmr = Math.floor((Math.random() * 2) + 1) * 1000;
     var timer = (App.cooldown-(new Date).getTime())/1E3;
-
-    if (typeof cooldown != "undefined") {
-      rndtmr = cooldown;
-    }
-
     if(0<timer){
-      if (cooldown > 500) console.log("timer: " + timer);
-      setTimeout(draw, rndtmr);
+      console.log("timer: " + timer);
+      setTimeout(draw, 1000);
     }
     else{
       for(var i = 0; i < painters.length; i++){
@@ -393,7 +387,7 @@ function AutoPXLS(images, cooldown, debug){
           var result = painters[i].drawImage();
 
           if(result > 0){
-            setTimeout(draw, rndtmr);
+            setTimeout(draw, result*1000);
             return;
           }
           else{
@@ -404,7 +398,7 @@ function AutoPXLS(images, cooldown, debug){
           continue;
         }
       }
-      setTimeout(draw, rndtmr);
+      setTimeout(draw, 3000);
     }
 
     return;
