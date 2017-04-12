@@ -211,7 +211,7 @@ function AutoPXLS(images, cooldown, debug){
 
   function draw(){
     var timer = (App.cooldown-(new Date).getTime())/1E3;
-    if(0<timer){
+    if(500<timer){
       console.log("timer: " + timer);
       setTimeout(draw, 1000);
     }
