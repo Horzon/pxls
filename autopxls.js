@@ -116,7 +116,7 @@ function AutoPXLS(images){
         }
       }
       if(color_id < 0)
-        //console.log("pixel at x:" + coords.x + " y: " + coords.y + " has incorrect color.");
+        console.log("pixel at x:" + coords.x + " y: " + coords.y + " has incorrect color.");
       
       return color_id;
     }
@@ -183,7 +183,7 @@ function AutoPXLS(images){
   function draw(){
     var timer = (App.cooldown-(new Date).getTime())/1E3;
     if(0<timer){
-      //console.log("timer: " + timer);
+      console.log("timer: " + timer);
       setTimeout(draw, 1000);
     }
     else{
