@@ -111,12 +111,12 @@ function AutoPXLS(images){
           color_id = i;
           break;
         }
-      }
-      if(color_id < 0)
-        console.log("pixel at x:" + coords.x + " y: " + coords.y + " has incorrect color.");
-      
-      return color_id;
-    }
+//      }
+//      if(color_id < 0)
+//        console.log("pixel at x:" + coords.x + " y: " + coords.y + " has incorrect color.");
+//      
+//      return color_id;
+//    }
 
     function tryToDraw(){
       for(var _y = 0; _y < canvas.height; _y++){
@@ -180,7 +180,7 @@ function AutoPXLS(images){
   function draw(){
     var timer = (App.cooldown-(new Date).getTime())/1E3;
     if(0<timer){
-      console.log("timer: " + timer);
+//      console.log("timer: " + timer);
       setTimeout(draw, 1000);
     }
     else{
