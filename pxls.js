@@ -1,4 +1,7 @@
-function AutoPXLS(images, cooldown, debug){
+
+
+
+function AutoPXLS(images){
 //
 
   function shuffle(array) {
@@ -187,7 +190,9 @@ function AutoPXLS(images, cooldown, debug){
     function isReady(){
       return image_loaded_flag;
     }
-    
+  };
+
+
   var painters = [];
   for(var i = 0; i < images.length; i++){
     painters[i] = Painter(images[i]);
